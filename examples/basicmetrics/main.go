@@ -122,7 +122,7 @@ func (m *Metrics) simulateTraffic() {
 		duration := 0.01 + rand.Float64()*1.99
 		m.requestDuration.Observe(duration)
 
-		// Simulate processing time
+		// Simulate processing time (0.001 to 0.1 seconds)
 		processingTime := 0.001 + rand.Float64()*0.1
 		m.processingTime.Observe(processingTime)
 
